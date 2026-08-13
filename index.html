@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app__header">
+      <h1 class="app__title">AI Assistant</h1>
+      <p class="app__subtitle">Ask a question, get an AI-generated answer.</p>
+    </header>
+
+    <section class="app__chat">
+      <div class="chat__output" id="output" aria-live="polite">
+        <!-- AI answers render here -->
+      </div>
+
+      <form class="chat__form" id="chat-form">
+        <textarea
+          class="chat__input"
+          id="question"
+          name="question"
+          rows="1"
+          placeholder="Type your question…"
+          aria-label="Your question"
+        ></textarea>
+        <button class="chat__submit" type="submit" id="submit" aria-label="Send question">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4.5 12h14m0 0-5.5-5.5M18.5 12 13 17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #111118;
+  --surface-2: #1e1e2e;
+  --border: #23232e;
+  --text: #e6e6e6;
+  --text-muted: #8a8a93;
+  --accent: #6e8bff;
+  --accent-glow: rgba(110, 139, 255, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.app {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.app__header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.app__title {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.app__subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.app__chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat__output {
+  min-height: 160px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.chat__form {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.chat__input {
+  flex: 1;
+  resize: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  min-height: 52px;
+  max-height: 160px;
+  transition: border-color 0.15s ease;
+}
+
+.chat__input::placeholder {
+  color: var(--text-muted);
+}
+
+.chat__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.chat__submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  background: var(--accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.chat__submit:hover {
+  background: #5a78f0;
+}
+
+.chat__submit:active {
+  transform: scale(0.96);
+}
